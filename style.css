@@ -1,0 +1,62 @@
+
+:root{
+  --baby-blue: #a8d8ff;
+  --blue: #0077cc;
+  --white: #ffffff;
+  --card-bg: rgba(255,255,255,0.9);
+  --glass: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--baby-blue) 0%, #eaf5ff 100%);
+  color:#033047;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  max-width:980px;
+  margin:28px auto;
+  padding:20px;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 8px 30px rgba(6,24,44,0.12);
+}
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.brand .logo{
+  width:56px;height:56px;border-radius:10px;background:var(--white);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.brand h1{margin:0;font-size:20px;color:var(--blue)}
+.controls{display:flex;gap:8px;align-items:center}
+.btn{
+  background:var(--blue);color:var(--white);border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600;
+  box-shadow: 0 6px 18px rgba(0,119,204,0.18);
+}
+.btn.ghost{background:transparent;color:var(--blue);border:1px solid rgba(0,119,204,0.12)}
+.grid{display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:18px}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+.map-card{height:420px;border-radius:12px;overflow:hidden;background:var(--glass);display:flex;flex-direction:column}
+.map-inner{flex:1}
+.form-row{display:flex;gap:8px;align-items:center;margin-top:10px}
+select,input{padding:10px;border-radius:10px;border:1px solid rgba(3,48,71,0.08);width:100%}
+.small{width:120px}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th{background:var(--baby-blue);text-align:left;padding:10px;border-bottom:1px solid rgba(0,0,0,0.06)}
+.table td{padding:10px;border-bottom:1px solid rgba(0,0,0,0.04)}
+.status{font-size:13px;color:#055;opacity:0.9;margin-top:8px}
+.footer{margin-top:14px;text-align:center;color:#045;opacity:0.8;font-size:13px}

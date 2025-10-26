@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Transporte Guaiúba — Login</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card header">
+      <div class="brand">
+        <div class="logo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#a8d8ff"/><path d="M6 15V9h12v6H6z" fill="#0077cc"/></svg></div>
+        <div>
+          <h1>Transporte Guaiúba</h1>
+          <div style="font-size:13px;color:#055;opacity:0.8">Acompanhe a van em tempo real</div>
+        </div>
+      </div>
+      <div class="controls">
+        <select id="perfil">
+          <option value="">Selecione perfil</option>
+          <option value="aluno">Aluno</option>
+          <option value="motorista">Motorista</option>
+        </select>
+        <input id="matricula" placeholder="Matrícula / ID" />
+        <button id="btn-login" class="btn">Entrar</button>
+      </div>
+    </div>
+    <div class="footer">Projeto de transporte universitário — cores: azul bebê e branco</div>
+  </div>
+
+<script>
+document.getElementById('btn-login').addEventListener('click', ()=>{
+  const perfil = document.getElementById('perfil').value;
+  const mat = document.getElementById('matricula').value.trim();
+  if(!perfil || !mat){ alert('Preencha perfil e matrícula'); return; }
+  localStorage.setItem('matricula', mat);
+  if(perfil==='aluno') location.href='aluno.html';
+  else location.href='motorista.html';
+});
+</script>
+</body>
+</html>

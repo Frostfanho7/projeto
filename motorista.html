@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Painel do Motorista — Transporte Guaiúba</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+  <div class="card header">
+    <div class="brand">
+      <div class="logo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#a8d8ff"/><path d="M6 15V9h12v6H6z" fill="#0077cc"/></svg></div>
+      <div><h1>Painel do Motorista</h1><div style="font-size:13px;color:#055;opacity:0.8">Compartilhe sua localização para os alunos</div></div>
+    </div>
+    <div class="controls">
+      <button id="btn-logout" class="btn ghost">Sair</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Compartilhar localização</h3>
+      <div class="form-row">
+        <button id="btn-share" class="btn">📍 Compartilhar em tempo real</button>
+        <button id="btn-stop" class="btn ghost">⛔ Parar</button>
+      </div>
+      <div style="margin-top:12px">
+        <h4>Alunos que marcaram volta</h4>
+        <table class="table" id="tabela-alunos">
+          <thead><tr><th>Nome</th><th>Ponto</th></tr></thead>
+          <tbody id="lista-alunos"><tr><td colspan="2">Carregando...</td></tr></tbody>
+        </table>
+      </div>
+      <div class="footer">Mantenha o botão ativado para que os alunos vejam sua posição</div>
+    </div>
+
+    <div class="map-card card">
+      <div class="map-inner" id="map"></div>
+    </div>
+  </div>
+</div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCftw-AGvhXzQROBHCpvumcqkRgGOOCv8g"></script>
+<script type="module" src="js/motorista.js"></script>
+</body>
+</html>
